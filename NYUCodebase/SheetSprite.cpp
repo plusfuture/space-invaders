@@ -41,6 +41,6 @@ void SheetSprite::Draw(ShaderProgram *program){
 	glEnableVertexAttribArray((*program).texCoordAttribute);
 
 	glDrawArrays(GL_TRIANGLES, 0, 6);
-	glDisableVertexAttribArray((*program).positionAttribute);
-	glDisableVertexAttribArray((*program).texCoordAttribute);
+	//glDisableVertexAttribArray((*program).positionAttribute);
+	//glDisableVertexAttribArray((*program).texCoordAttribute);
 }

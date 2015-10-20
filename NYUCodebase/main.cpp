@@ -20,7 +20,6 @@
 int main(int argc, char *argv[])
 {
 	ClassDemoApp app;
-	app.Setup();
 	while (!app.UpdateAndRender()) {}
 	/*SDL_Init(SDL_INIT_VIDEO);
 	displayWindow = SDL_CreateWindow("My Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 360, SDL_WINDOW_OPENGL);

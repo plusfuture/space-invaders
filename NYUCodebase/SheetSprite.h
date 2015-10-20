@@ -1,6 +1,10 @@
 #ifndef SHEETSPRITE_HEADER
 #define SHEETSPRITE_HEADER
 #include "ShaderProgram.h"
+#using <System.dll>
+using namespace System;
+using namespace System::Diagnostics;
+#define DEBUG
 
 class SheetSprite{
 public:

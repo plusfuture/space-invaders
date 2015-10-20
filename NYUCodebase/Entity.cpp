@@ -17,11 +17,11 @@ void Entity::Update(float elapsed){
 
 void Entity::Render(ShaderProgram *program){
 	Matrix modelMatrix;
-
+	modelMatrix.identity();
 	modelMatrix.Translate(x, y, 0.0);
 	program->setModelMatrix(modelMatrix);
 
-	Draw(program);
+	sprite.Draw(program);
 }
 
 void Entity::Draw(ShaderProgram *program){
@@ -29,10 +29,10 @@ void Entity::Draw(ShaderProgram *program){
 }
 
 bool Entity::collidesWith(Entity *entity){
-	if (x - width/2 > entity->x + (entity->width)/2 ||
-		x + width/2 < entity->x - (entity->width)/2 ||
-		y - height/2 > entity->y + (entity->height)/2 ||
-		y + height/2 < entity->y - (entity->height)/2){ //rectangles are not intersecting
+	if (((x - width) > (entity->x + (entity->width))) ||
+		((x + width) < (entity->x - (entity->width))) ||
+		((y - height) > (entity->y + (entity->height))) ||
+		((y + height) < (entity->y - (entity->height)))){ //rectangles are not intersecting
 		return false;
 	}
 	else

@@ -1,9 +1,9 @@
 
 #include "ShaderProgram.h"
 
-ShaderProgram::ShaderProgram(){
+/*ShaderProgram::ShaderProgram(){
 
-}
+}*/
 
 ShaderProgram::ShaderProgram(const char *vertexShaderFile, const char *fragmentShaderFile) {
     
